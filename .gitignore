@@ -1,0 +1,39 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Testing
+coverage
+*.log
+
+# Next.js
+.next
+out
+build
+dist
+
+# Environment
+.env
+.env*.local
+.env.production
+
+# SST
+.sst
+.open-next
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.pem
+.vercel
+.turbo
