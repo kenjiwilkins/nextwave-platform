@@ -1,0 +1,25 @@
+{
+  "name": "nextwave-platform",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Modern serverless platform built with Next.js, AWS Lambda, DynamoDB, and SST v3",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "scripts": {
+    "dev": "sst dev",
+    "build": "pnpm -r build",
+    "deploy:beta": "sst deploy --stage beta",
+    "deploy:production": "sst deploy --stage production",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "clean": "pnpm -r clean && rm -rf .sst"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  },
+  "packageManager": "pnpm@8.15.0"
+}
