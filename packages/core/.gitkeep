@@ -1,0 +1,3 @@
+# Core Package (Shared Code)
+
+This directory will contain shared types, schemas, constants, and utilities used across packages.
