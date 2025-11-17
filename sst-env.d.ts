@@ -5,6 +5,10 @@
 
 declare module "sst" {
   export interface Resource {
+    "EmployeeTable": {
+      "name": string
+      "type": "sst.aws.Dynamo"
+    }
     "HealthCheck": {
       "name": string
       "type": "sst.aws.Function"

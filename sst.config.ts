@@ -9,13 +9,22 @@ export default $config({
     };
   },
   async run() {
+    const employeeTable = new sst.aws.Dynamo("EmployeeTable", {
+      fields: {
+        userId: "string",
+      },
+      primaryIndex: { hashKey: "userId" },
+    });
+
     const api = new sst.aws.Function("HealthCheck", {
       handler: "infra/functions/health.handler",
       url: true,
+      link: [employeeTable],
     });
 
     return {
       api: api.url,
+      employeeTable: employeeTable.name,
     };
   },
 });
