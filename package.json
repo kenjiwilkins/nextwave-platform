@@ -9,9 +9,16 @@
   },
   "scripts": {
     "dev": "sst dev",
+    "dev:beta": "sst dev --stage beta",
     "build": "pnpm -r build",
+    "deploy:dev": "sst deploy --stage dev",
     "deploy:beta": "sst deploy --stage beta",
     "deploy:production": "sst deploy --stage production",
+    "remove:dev": "sst remove --stage dev",
+    "remove:beta": "sst remove --stage beta",
+    "console": "sst shell",
+    "console:beta": "sst shell --stage beta",
+    "console:production": "sst shell --stage production",
     "test": "pnpm -r test",
     "lint": "pnpm -r lint",
     "typecheck": "pnpm -r typecheck",
@@ -19,6 +26,8 @@
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
+    "aws-cdk-lib": "^2.224.0",
+    "sst": "^3.17.23",
     "typescript": "^5.3.0"
   },
   "packageManager": "pnpm@8.15.0"
