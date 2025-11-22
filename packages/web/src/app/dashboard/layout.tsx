@@ -9,5 +9,5 @@ export default function ProjectDashboardLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <section>{children}</section>;
+  return <>{children}</>;
 }
